@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html>
   <head>
     <title>Me contacter - Jean Do</title>
     <meta
@@ -14,51 +14,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body aria-hidden="true">
     <header>
       <a href=".">
-        <img src="cdd005ac7e164cf9940d9ba62c59700c.png" alt="logo" />
+        <img src="cdd005ac7e164cf9940d9ba62c59700c.png" alt="" />
       </a>
-      <nav>
+      <div id="navigation">
         <ul>
           <li>
-            <a href="."> Accueil </a>
+            <a href="." aria-label="home"> Accueil </a>
           </li>
           <li>
-            <a href="./contact.html" aria-current="page"> Contact </a>
+            <a href="./contact.html" class="current" aria-label="content">
+              Contact
+            </a>
           </li>
         </ul>
-      </nav>
+      </div>
     </header>
-    <main>
-      <div role="dialog" id="modal" aria-labelledby="modal-title">
+    <div id="main-content">
+      <div id="modal" aria-label="contact-form">
         <h1 id="modal-title">Formulaire de contact</h1>
         <form onsubmit="toggleModal(event)">
-          <label>
-            Votre nom:
-            <input type="text" id="name" />
-          </label>
-          <label>
-            Votre adresse électronique:
-            <input type="email" id="email" />
-          </label>
-          <label
-            >Vous êtes...
-            <select>
-              <option value="person">Un particulier</option>
-              <option value="entity">Un organisme</option>
-            </select>
-          </label>
-          <label>
-            Votre question:
-            <textarea id="question" cols="30" rows="10"></textarea>
-          </label>
+          <label> Votre nom: </label>
+          <input type="text" id="name" />
+          <label> Votre adresse électronique: </label>
+          <input type="email" id="email" tabindex="-1" />
+          <label>Vous êtes... </label>
+          <select aria-label="are-you">
+            <option value="person">Un particulier</option>
+            <option value="entity">Un organisme</option>
+          </select>
+          <label> Votre question: </label>
+          <textarea id="question" cols="30" rows="10"></textarea>
           <button id="submit-button" type="submit">Envoyer</button>
         </form>
       </div>
 
-      <section id="contact-info">
-        <h1>Me contacter</h1>
+      <section id="contact-info" aria-labelledby="important">
+        <p id="important">Me contacter</p>
         <p>Mon numéro de téléphone: 0x xx xx xx xx</p>
         <p>Mon adresse email: jean.do@hubvisory.com</p>
       </section>
@@ -66,14 +60,14 @@
       <button onclick="toggleModal(event)">
         Une question ? Contactez-moi !
       </button>
-    </main>
+    </div>
 
     <footer>
       <p>Copyright Jean Do 2022. Tous droits réservés</p>
-      <button aria-label="Twitter">
+      <button aria-label="Twitter button">
         <i class="fa-brands fa-twitter fa-2x"></i>
       </button>
-      <button aria-label="Instagram">
+      <button>
         <i class="fa-brands fa-instagram fa-2x"></i>
       </button>
     </footer>

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="fr">
+<html lang="en">
   <head>
     <title>Jean Do</title>
     <meta
@@ -20,16 +20,17 @@
       <a href=".">
         <img src="cdd005ac7e164cf9940d9ba62c59700c.png" alt="logo" />
       </a>
-      <nav>
+      <div id="navigation">
         <ul>
           <li>
-            <a href="." aria-current="page"> Accueil </a>
+            <a href="." class="current"> Accueil </a>
           </li>
           <li>
-            <a href="./contact.html"> Contact </a>
+            <a href="./contact.html" tabindex="2"> Contact </a>
+
           </li>
         </ul>
-      </nav>
+      </div>
     </header>
     <main id="about-me">
       <h1>Jean Do, photographe de l'environnement</h1>
@@ -39,72 +40,53 @@
           src="https://thumbs.dreamstime.com/z/photographe-professionnel-12462630.jpg"
           alt="Jean Do prend en photo l'objectif"
           id="my-photo"
+          
         />
       </div>
 
-      <section>
-        <h2>Ce que je fais</h2>
+      <div class="section" role="main">
+        <h3>Ce que je fais</h3>
 
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-          faucibus sapien posuere diam semper porta. Aliquam pellentesque eget
-          tortor in lacinia. Nam at libero ac justo tempor convallis sed ac leo.
-          Curabitur mattis lorem a turpis lacinia, eget blandit nulla pulvinar.
-          Nulla euismod ut purus id luctus. Duis sed nisl viverra, pretium arcu
-          ut, tristique risus. In sed nisi vel est hendrerit accumsan. Nulla
-          ultricies massa urna. Nam viverra enim in venenatis maximus. Sed at
-          volutpat ex. Etiam tempor dictum luctus. In viverra risus vulputate
-          tincidunt lacinia. <br />Vivamus consequat lorem nec ante suscipit,
-          quis tempus mauris pharetra. Sed tempor dapibus neque ac elementum.
-          Praesent ac sagittis est, eget consectetur tellus. Nam convallis purus
-          a est suscipit, quis ultrices eros eleifend. Vestibulum ante ipsum
-          primis in faucibus orci luctus et ultrices posuere cubilia curae;
-          Donec luctus facilisis velit. Ut mauris leo, finibus vel fermentum
-          non, dignissim quis magna. Donec finibus, erat et pellentesque
-          placerat, felis magna malesuada enim, in faucibus turpis odio
-          consectetur turpis. Nunc ornare tempor nisl, nec suscipit sapien
-          malesuada at. Morbi sed suscipit risus. Pellentesque habitant morbi
-          tristique senectus et netus et malesuada fames ac turpis egestas.
-          Vestibulum ultrices elementum mauris, sit amet fringilla nisl sagittis
-          placerat. Sed tristique dolor nec massa consectetur volutpat.
-          Phasellus enim mi, luctus eget urna in, aliquet rhoncus dui.
-        </p>
-      </section>
+        <img src="Screenshot from 2022-05-11 17-00-03.png" alt="description">
+      </div class="section">
 
-      <section>
+      <div class="section">
         <h2>Mes oeuvres</h2>
 
         <div id="img-gallery">
           <div class="img-wrapper">
             <img
               src="https://images.pexels.com/photos/1693095/pexels-photo-1693095.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              alt="photo d'aurore boréale"
+              tabindex="0"
             />
           </div>
 
           <div class="img-wrapper">
             <img
               src="https://images.pexels.com/photos/3284167/pexels-photo-3284167.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              alt="photo du désert"
+              tabindex="0"
+
             />
           </div>
 
           <div class="img-wrapper">
             <img
               src="https://images.pexels.com/photos/5187131/pexels-photo-5187131.jpeg?cs=srgb&dl=pexels-brady-knoll-5187131.jpg&fm=jpg"
-              alt="photo de forêt brumeuse"
+              alt="forest"
+              tabindex="1"
+
             />
           </div>
         </div>
-      </section>
+      </div class="section">
     </main>
 
     <footer>
       <p>Copyright Jean Do 2022. Tous droits réservés</p>
-      <button aria-label="Twitter">
+      <button aria-label="Twitter button">
         <i class="fa-brands fa-twitter fa-2x"></i>
       </button>
-      <button aria-label="Instagram">
+      <button>
         <i class="fa-brands fa-instagram fa-2x"></i>
       </button>
     </footer>

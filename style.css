@@ -9,6 +9,10 @@ body {
   justify-content: space-between;
 }
 
+*:focus {
+  outline: none;
+}
+
 p {
   font-size: 16px;
 }
@@ -17,10 +21,6 @@ button {
   background: unset;
   border: unset;
   cursor: pointer;
-}
-
-div[role="dialog"] {
-  display: none;
 }
 
 a {
@@ -36,13 +36,15 @@ header a {
 
 header,
 nav ul,
+#navigation ul,
 #about-me {
   display: flex;
 }
 
 header,
 footer,
-main button {
+main button,
+#main-content button {
   background-color: purple;
 }
 
@@ -59,35 +61,43 @@ header img {
 }
 
 header a {
-  color: white;
   font-weight: bold;
   font-size: 1.2rem;
 }
 
-header a,
 footer,
 footer i {
   color: white;
 }
 
-nav {
+footer button:focus i {
+  color: cyan;
+  outline: none;
+}
+
+nav,
+#navigation {
   height: 100%;
 }
 
-nav ul {
+nav ul,
+#navigation ul {
   gap: 20px;
 }
 
-nav li {
+nav li,
+#navigation li {
   height: 100%;
   list-style-type: none;
 }
 
-nav li:hover {
+nav li:hover,
+#navigation li:hover {
   border-bottom: 2px solid purple;
 }
 
-main {
+main,
+#main-content {
   width: 85%;
   max-width: 1000px;
   margin: auto;
@@ -99,14 +109,16 @@ main {
 }
 
 main,
-#modal {
+#modal,
+#main-content {
   background-color: white;
   border: #dadada;
   border-radius: 3px;
   padding: 32px;
 }
 
-main button {
+main button,
+#main-content button {
   color: white;
   font-weight: bold;
   padding: 8px;
@@ -132,7 +144,8 @@ main button {
   width: 64px;
 }
 
-section {
+section,
+.section {
   margin-bottom: 64px;
 }
 
@@ -169,6 +182,7 @@ footer {
 }
 
 #modal {
+  display: none;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -190,6 +204,16 @@ form {
   gap: 16px;
 }
 
-[aria-current="page"] {
+[aria-current="page"],
+.current {
   border-bottom: 2px solid white;
+}
+
+#important {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+#contact-info p {
+  font-size: 9px;
 }
