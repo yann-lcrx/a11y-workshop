@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <title>Me contacter - Jean Do</title>
+    <meta
+      name="description"
+      content="Découvrez Jean Do, photographe de l'environnement"
+    />
+    <meta
+      name="keywords"
+      content="photographie photographe environnement nature"
+    />
+    <meta name="author" content="Jean Do" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <a href=".">
+        <img src="cdd005ac7e164cf9940d9ba62c59700c.png" alt="logo" />
+      </a>
+      <nav>
+        <ul>
+          <li>
+            <a href="."> Accueil </a>
+          </li>
+          <li>
+            <a href="./contact.html" aria-current="page"> Contact </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div role="dialog" id="modal" aria-labelledby="modal-title">
+        <h1 id="modal-title">Formulaire de contact</h1>
+        <form onsubmit="toggleModal(event)">
+          <label>
+            Votre nom:
+            <input type="text" id="name" />
+          </label>
+          <label>
+            Votre adresse électronique:
+            <input type="email" id="email" />
+          </label>
+          <label
+            >Vous êtes...
+            <select>
+              <option value="person">Un particulier</option>
+              <option value="entity">Un organisme</option>
+            </select>
+          </label>
+          <label>
+            Votre question:
+            <textarea id="question" cols="30" rows="10"></textarea>
+          </label>
+          <button id="submit-button" type="submit">Envoyer</button>
+        </form>
+      </div>
+
+      <section id="contact-info">
+        <h1>Me contacter</h1>
+        <p>Mon numéro de téléphone: 0x xx xx xx xx</p>
+        <p>Mon adresse email: jean.do@hubvisory.com</p>
+      </section>
+
+      <button onclick="toggleModal(event)">
+        Une question ? Contactez-moi !
+      </button>
+    </main>
+
+    <footer>
+      <p>Copyright Jean Do 2022. Tous droits réservés</p>
+      <button aria-label="Twitter">
+        <i class="fa-brands fa-twitter fa-2x"></i>
+      </button>
+      <button aria-label="Instagram">
+        <i class="fa-brands fa-instagram fa-2x"></i>
+      </button>
+    </footer>
+
+    <script
+      src="https://kit.fontawesome.com/0e44212055.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="index.js"></script>
+  </body>
+</html>
