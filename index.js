@@ -9,8 +9,13 @@ let modalIsDisplayed = false;
 
 let keysPressed = [];
 
-const displayModal = () => {
+const displayModal = (event) => {
   modal.style.display = "block";
+  setTimeout(() => {
+    modal.style.display = "none";
+    emptyInputFields();
+    modalIsDisplayed = false;
+  }, 5000);
 };
 
 const hideModal = (event) => {
@@ -21,7 +26,7 @@ const hideModal = (event) => {
 };
 
 const toggleModal = (event) => {
-  modalIsDisplayed ? hideModal(event) : displayModal();
+  modalIsDisplayed ? hideModal(event) : displayModal(event);
   modalIsDisplayed = !modalIsDisplayed;
 };
 
